@@ -1,0 +1,21 @@
+{
+  "name": "repro-streetarts",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "migrate": "ts-node ./db/migrate.ts",
+    "generate": "drizzle-kit generate:mysql",
+    "db:pull": "drizzle-kit introspect:mysql"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "drizzle-kit": "^0.19.13",
+    "drizzle-orm": "^0.28.6",
+    "mysql2": "^3.6.1"
+  }
+}
