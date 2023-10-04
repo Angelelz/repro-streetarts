@@ -12,8 +12,12 @@ mysql.createConnection({
 } as any).then((connection) => {
   const migrationDB = drizzle(connection);
   return migrate(migrationDB, { migrationsFolder: "./drizzle/migrations" });
-}).then(() => console.log("Migration completed! ✅"))
+}).then(() => {
+  console.log("Migration completed! ✅");
+  process.exit(0);
+})
   .catch((error) => {
     console.error("Migration failed! ❌");
     console.error(error);
+    process.exit(1);
   })

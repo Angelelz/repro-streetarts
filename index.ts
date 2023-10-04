@@ -53,3 +53,5 @@ await db.insert(stores_categories).values([{
 await getStore("store1")
 
 console.log("done")
+
+process.exit(0)
