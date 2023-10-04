@@ -7,6 +7,8 @@ bun install
 ```
 
 To run:
+ - use .env.example file to create your own .env file and edit it with your database credentials
+ - run
 ```bash
 bun ./drizzle/migrate.ts
 bun ./drizzle/do_seed.ts
