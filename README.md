@@ -9,7 +9,7 @@ bun install
 To run:
 ```bash
 bun ./drizzle/migrate.ts
-bun ./drizzle/seed.ts
+bun ./drizzle/do_seed.ts
 bun run index.ts
 ```
 

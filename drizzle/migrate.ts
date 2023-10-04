@@ -4,12 +4,12 @@ import mysql from "mysql2/promise";
 
 
 mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'streets',
-  port: 3306
-}).then((connection) => {
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database,
+  port: process.env.port
+} as any).then((connection) => {
   const migrationDB = drizzle(connection);
   return migrate(migrationDB, { migrationsFolder: "./drizzle/migrations" });
 }).then(() => console.log("Migration completed! ✅"))
